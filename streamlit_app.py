@@ -456,10 +456,10 @@ if st.session_state.show_google_modal:
                 
                 st.write("🔑 **Credentials loaded.** Ready to authenticate through your Google Account:")
                 
-                # Render the Google Sign-in Button with target="_self" to redirect inside the same page
+                # Render the Google Sign-in Button with target="_top" to break out of the Streamlit iframe
                 button_html = f"""
                 <div style="display: flex; justify-content: center; margin: 20px 0;">
-                    <a href="{google_auth_url}" target="_self" style="text-decoration: none; width: 100%;">
+                    <a href="{google_auth_url}" target="_top" style="text-decoration: none; width: 100%;">
                         <div style="display: flex; align-items: center; justify-content: center; background-color: white; color: #3c4043; border-radius: 4px; padding: 12px; font-weight: 500; font-family: Roboto, sans-serif; cursor: pointer; border: 1px solid #dadce0; box-shadow: 0 1px 3px rgba(0,0,0,0.08); transition: background-color 0.2s;">
                             <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" width="20" height="20" style="margin-right: 12px;"/>
                             <span style="font-size: 0.95rem; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; color: #374151;">Sign in with Google</span>
