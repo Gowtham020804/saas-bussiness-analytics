@@ -601,10 +601,7 @@ st.sidebar.markdown("""
 """, unsafe_allow_html=True)
 
 if not st.session_state.logged_in:
-    page = st.sidebar.radio(
-        "🚀 Navigation",
-        ["Home", "Login / Signup"]
-    )
+    page = "Login / Signup"
 else:
     # Safely retrieve and consume programmatic redirect index after Google Login
     default_idx = 0
